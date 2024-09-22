@@ -32,7 +32,7 @@ t = turtle.Turtle()
 set_turtle_image(t, "girl_red.gif")
 
 t.penup()
-t.speed(1)
+t.speed(2)
 
 t.penup()
 t.goto(300,-235)
