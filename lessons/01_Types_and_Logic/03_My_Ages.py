@@ -52,7 +52,21 @@ if age >=54 and age <=1000:
     messagebox.showinfo('What you are', 'You are a Senior')
 # Use if statements to determine the age group
 # and create a message
-
+#REMEBER TO SIGN OUT OR ELSE
+#REMEBER TO SIGN OUT OR ELSE
+#REMEBER TO SIGN OUT OR ELSE
+#REMEBER TO SIGN OUT OR ELSE
+#REMEBER TO SIGN OUT OR ELSE
+#REMEBER TO SIGN OUT OR ELSE
+#REMEBER TO SIGN OUT OR ELSE
+#REMEBER TO SIGN OUT OR ELSE
+#REMEBER TO SIGN OUT OR ELSE
+#REMEBER TO SIGN OUT OR ELSE
+#REMEBER TO SIGN OUT OR ELSE
+#REMEBER TO SIGN OUT OR ELSE
+#REMEBER TO SIGN OUT OR ELSE
+#REMEBER TO SIGN OUT OR ELSE
+#REMEBER TO SIGN OUT OR ELSE
 # Show the message to the user
 window.mainloop()  # Keeps the window open
 
