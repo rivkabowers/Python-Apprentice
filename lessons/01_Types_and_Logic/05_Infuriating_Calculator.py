@@ -33,8 +33,19 @@ b = simpledialog.askinteger("Second number" , "Type in the second number")# Ask 
 
 c = simpledialog.askstring("Math symbol" , "Type in your math symbol")
 
-# Use if-elif-else statements to provide the desired math operation on the numbers and display the result.
+if c == ('*'):
+   messagebox.showinfo("Answer" ,a * b) # Use if-elif-else statements to provide the desired math operation on the numbers and display the result.
 
-messagebox.showerror("Error" , "I don't know what that means")# If the user enters an unknown operation, display an error message. ( use messagebox.showerror()
+elif c == ('+'):
+   messagebox.showinfo("Answer" ,a + b)
+
+elif c == ('-'):
+   messagebox.showinfo("Answer" ,a - b)
+
+elif c == ('/'):
+   messagebox.showinfo("Answer" ,a / b)
+
+else: 
+   messagebox.showerror("Error" , "I don't know what that means")# If the user enters an unknown operation, display an error message. ( use messagebox.showerror()
 
 window.mainloop()# Keep the window open
