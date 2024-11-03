@@ -17,7 +17,7 @@ Your program should print 4 badgers.
 """
 
 
-for i in range (1, 31):
+for i in range (10,70,15):
 
     # Don't change anything below this line
     if i % 15 == 0:
