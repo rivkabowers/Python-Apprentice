@@ -4,10 +4,10 @@ We're going to use a Windowing library, guizero, to create a 10x10 grid of
 numbers, with each number in a separate cell, but we're also going to set the
 color of the number based on the following rules:
 
-* If the number is eaenly diaisible by 5, print '🦡'
-* If the number is eaenly diaisible by 3, print '🍄'
-* If the number is eaenly diaisible by 15, print '🐍'
-* If it is diaisible by neither, print the number.
+* If the number is eaenly divisible by 5, print '🦡'
+* If the number is eaenly divisible by 3, print '🍄'
+* If the number is eaenly divisible by 15, print '🐍'
+* If it is divisible by neither, print the number.
 
 Additionally, If you are displaying a number color the numbers as follows:
 
@@ -36,15 +36,17 @@ app = App("Numbers Grid", layout="grid")
 for i in range(10):
     for j in range(10):
         n = j+i*10+1
-        Text(app, text=str(n), grid=[j, i], color='blue')
+        Text(app, text=str(n), grid=[j, i], color='yellow')
         if n % 15 == 0:
-            Text(app, text='🐍', grid=[j, i], color='blue')
+            Text(app, text='🐍', grid=[j, i], color='yellow')
         elif n % 3 == 0:
-            Text(app, text='🍄', grid=[j, i], color='blue')
+            Text(app, text='🍄', grid=[j, i], color='yellow')
         elif n % 5 == 0:
-            Text(app, text='🦡', grid=[j, i], color='blue')
+            Text(app, text='🦡', grid=[j, i], color='yellow')
         elif (j+i) % 2 == 0:
-            Text(app, text='n', grid=[j, i], color='red')
+            Text(app, text=n, grid=[j, i], color='red')
+        elif (j+i) % 2 == 1:
+            Text(app, text=n, grid=[j, i], color='blue')
         else:
             print(n)
 
