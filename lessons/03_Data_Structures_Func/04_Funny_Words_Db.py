@@ -44,7 +44,17 @@ def add_definition(db, key, value):
     # Set the item in the database
 
     pass
+"""
+    Adds the definition associated with the given key from the database.
 
+    Args:
+        db (dict): The database containing the key-value pairs.
+        key: The key to be deleted from the database.
+        value:
+
+    Returns:
+        None
+    """
 
 def delete_definition(db, key):
     """

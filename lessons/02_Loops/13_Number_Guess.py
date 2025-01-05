@@ -43,7 +43,7 @@ def ask_integer(prompt):
 n = random.randint(1, 100)
 
 for guess in range (n):
-    guess = ask_integer('guess a number between 1 and 100 ')
+    guess = ask_integer('guess a number between 1 and 100, ')
 
     if guess % 7 == 0:
         print ('That is a terrible number >:( , start over ')
