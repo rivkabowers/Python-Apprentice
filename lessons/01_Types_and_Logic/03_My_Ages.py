@@ -40,6 +40,8 @@ window = messagebox.showinfo('How old are you')# Ask the user's age
 
 if age <=2: 
     messagebox.showinfo('What you are', 'You are a Baby')
+elif age == 12:
+    messagebox.showinfo('What you are', 'You are pretty awesome!')
 elif age >=3 and age <=5: 
     messagebox.showinfo('What you are', 'You are a Toddler')
 elif age >=6 and age <=12: 
@@ -48,25 +50,12 @@ elif age >=13 and age <=18:
     messagebox.showinfo('What you are', 'You are a Teen')
 elif age >=19 and age <=54: 
     messagebox.showinfo('What you are', 'You are a Adult')
+elif age >=120:
+    messagebox.showinfo('What are you', 'You are WAAAAAAAAAAY too old')
 else:
     messagebox.showinfo('What you are', 'You are a Senior')
 # Use if statements to determine the age group
 # and create a message
-#REMEBER TO SIGN OUT OR ELSE
-#REMEBER TO SIGN OUT OR ELSE
-#REMEBER TO SIGN OUT OR ELSE
-#REMEBER TO SIGN OUT OR ELSE
-#REMEBER TO SIGN OUT OR ELSE
-#REMEBER TO SIGN OUT OR ELSE
-#REMEBER TO SIGN OUT OR ELSE
-#REMEBER TO SIGN OUT OR ELSE
-#REMEBER TO SIGN OUT OR ELSE
-#REMEBER TO SIGN OUT OR ELSE
-#REMEBER TO SIGN OUT OR ELSE
-#REMEBER TO SIGN OUT OR ELSE
-#REMEBER TO SIGN OUT OR ELSE
-#REMEBER TO SIGN OUT OR ELSE
-#REMEBER TO SIGN OUT OR ELSE
 # Show the message to the user
 window.mainloop()  # Keeps the window open
 

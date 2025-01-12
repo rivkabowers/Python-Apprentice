@@ -4,8 +4,8 @@ from guizero import App, Box, Text, TextBox, PushButton, ListBox, error
 
 This program provides a graphical user interface (GUI) for managing a dictionary
 of funny words and their definitions. Users can add new definitions, delete
-existing definitions, and view the list of definitions in a listbox. 
-
+existing definition, and view the list of definitions in a listbox. 
+ 
 The module uses the guizero library to create the GUI components and handle user
 interactions.  It defines several functions for adding and deleting definitions,
 as well as checking if a definition is funny. The definitions are stored in a
