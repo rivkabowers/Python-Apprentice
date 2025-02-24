@@ -1,4 +1,3 @@
-
 from tkinter import messagebox, simpledialog, Tk ;room = messagebox.showinfo("Hotel" , "Welcome to the hotel")
 window = Tk()     # Create a window object
 window.withdraw()
@@ -50,9 +49,11 @@ else:
 
 
 if wantodo == 'Check out' or 'out':
-    messagebox.showinfo("Occupied rooms", "Occupied rooms:      " + f"{stayroom}")
+    messagebox.showinfo("Occupied rooms", "Rooms that are occupied: " + f"{stayroom}")
     simpledialog.askstring("Name", "What is your name?")
     roomstayed = simpledialog.askinteger("Rooms" , "Which room did you stay in?")
     messagebox.showinfo("Thank you", "Thank you for staying at our Hotel, have a nice day " + name)
+    messagebox.showinfo("Occupied rooms", "Rooms that are occupied:")
+
 
 window.mainloop()
