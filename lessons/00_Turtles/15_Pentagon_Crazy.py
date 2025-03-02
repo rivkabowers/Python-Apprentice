@@ -21,17 +21,17 @@ colors = ("red", "blue", "green", "yellow", "orange")
 
 myTurtle = turtle.Turtle()
 myTurtle.shape("turtle")
-myTurtle.speed(0)
-myTurtle.width(5)
+myTurtle.speed(766875324345697)
+myTurtle.width(7)
 
 sides = 5
 angle = 360 / sides
 
-for i in range(360):
+for i in range(600):
     if i == 100:
-        myTurtle.width(4)
+        myTurtle.width(7)
     if i == 200:
-        myTurtle.width(3)
+        myTurtle.width(7)
     myTurtle.pencolor(getNextColor(i))
     myTurtle.forward(i)
     myTurtle.right(angle + 1)

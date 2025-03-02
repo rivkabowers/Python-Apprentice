@@ -5,7 +5,7 @@ window.withdraw()
 
 name = simpledialog.askstring("Hello" , "What is your name?")
 
-wantodo = simpledialog.askstring("What do you want to do?" , "Do you want to Check in, Check out or Exit?")# Ask the user for the first number   
+wantodo = simpledialog.askstring("Check in", "Would you like to Check in?")# Ask the user for the first number   
 
 room = {
     0:'Open',
@@ -21,8 +21,10 @@ room = {
     10:'Open',
 }
 
+if wantodo == 'no':
+    messagebox.showinfo('TOO BAD', 'Too bad')
 
-if wantodo == 'Check in' or 'in':
+elif wantodo == 'Yes' or 'yes':
     messagebox.showinfo('room', room)
     stayroom = simpledialog.askinteger("Rooms" , "Which room do you want to stay in?")
     days = simpledialog.askinteger("Stay" , "How many days will you be staying for?")
@@ -32,15 +34,65 @@ else:
     messagebox.showinfo("Hmmmmm" , "I'm sorry I don't understand.")
 
 
-if stayroom in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
-  messagebox.showinfo("Cost",f"${100 * days}")
-  pay = simpledialog.askinteger("Please Pay",f"${100 * days}")
+if stayroom == 0:
+    pay = 50
+    messagebox.showinfo("Cost" , "That will cost you " f"${50*days}")
+    cost = simpledialog.askinteger("Pay", "Please Pay " f"${50*days}")
 
+elif stayroom == 1:
+    pay = 60
+    messagebox.showinfo("Cost" , "That will cost you " f"${60*days}")
+    cost = simpledialog.askinteger("Pay", "Please Pay " f"${60*days}")  
+
+elif stayroom == 2:
+    pay = 70
+    messagebox.showinfo("Cost" , "That will cost you " f"${70*days}")
+    cost = simpledialog.askinteger("Pay", "Please Pay " f"${70*days}")
+
+elif stayroom == 3:
+    pay = 80
+    messagebox.showinfo("Cost" , "That will cost you " f"${80*days}")
+    cost = simpledialog.askinteger("Pay", "Please Pay " f"${80*days}")
+
+elif stayroom == 4:
+    pay = 90
+    messagebox.showinfo("Cost" , "That will cost you " f"${90*days}")
+    cost = simpledialog.askinteger("Pay", "Please Pay " f"${90*days}")
+
+elif stayroom == 5:
+    pay = 100
+    messagebox.showinfo("Cost" , "That will cost you " f"${100*days}")
+    cost = simpledialog.askinteger("Pay", "Please Pay " f"${100*days}")
+
+elif stayroom == 6:
+    pay = 110
+    messagebox.showinfo("Cost" , "That will cost you " f"${110*days}")
+    cost = simpledialog.askinteger("Pay", "Please Pay " f"${110*days}")
+
+elif stayroom == 7:
+    pay = 120
+    messagebox.showinfo("Cost" , "That will cost you " f"${120*days}")
+    cost = simpledialog.askinteger("Pay", "Please Pay " f"${120*days}")
+
+elif stayroom == 8:
+    pay = 130
+    messagebox.showinfo("Cost" , "That will cost you " f"${130*days}")
+    cost = simpledialog.askinteger("Pay", "Please Pay " f"${130*days}")
+
+elif stayroom == 9:
+    pay = 140
+    messagebox.showinfo("Cost" , "That will cost you " f"${140*days}")
+    cost = simpledialog.askinteger("Pay", "Please Pay " f"${140*days}")
+
+elif stayroom == 10:
+    pay = 150
+    messagebox.showinfo("Cost" , "That will cost you " f"${150*days}")
+    cost = simpledialog.askinteger("Pay", "Please Pay " f"${150*days}")
+        
 else:
    messagebox.showinfo("Hmmmmm" , "I'm sorry I don't understand.")
 
-
-if pay == 100 * days:
+if cost == pay*days:
     messagebox.showinfo("Thank you", "Have a nice day, " + name)
 
 else:
@@ -49,11 +101,12 @@ else:
 
 
 if wantodo == 'Check out' or 'out':
-    messagebox.showinfo("Occupied rooms", "Rooms that are occupied: " + f"{stayroom}")
+    simpledialog.askstring("Check out", "Can I Check you out?")
     simpledialog.askstring("Name", "What is your name?")
-    roomstayed = simpledialog.askinteger("Rooms" , "Which room did you stay in?")
-    messagebox.showinfo("Thank you", "Thank you for staying at our Hotel, have a nice day " + name)
-    messagebox.showinfo("Occupied rooms", "Rooms that are occupied:")
+    messagebox.showinfo("Occupied rooms", "Occupied rooms: #" + f"{stayroom}")
+    roomstayed = simpledialog.askinteger("Room" , "Which room did you stay in " + name + "?")
+    messagebox.showinfo("Thank you", "Thank you for staying at our Hotel, have a nice day, " + name + "!")
+    messagebox.showinfo("Occupied rooms", "Rooms that are occupied: None")
 
 
 window.mainloop()
