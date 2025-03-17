@@ -189,17 +189,17 @@ from tkinter import messagebox, simpledialog, Tk
 window = Tk()
 window.withdraw()
 
-# Room status: Open or taken by guest
+
 room = {i: 'Open' for i in range(11)}
 
-# Dictionary to store guest information: guest's name and room
+
 guest_info = {}
 
 def check_in():
-    # Ask for the name of the guest
+
     name = simpledialog.askstring("Hello", "What is your name?")
     
-    # Ask if the guest is having a nice day
+
     wantodo = simpledialog.askstring('Day', 'Are you having a nice day?')
     if wantodo.lower() == 'no':
         messagebox.showinfo('Bye', 'Ok, have a good day!')
@@ -216,13 +216,6 @@ def check_in():
         stayrooms = [] 
         for i in range(many):
             stayroom = simpledialog.askinteger("Rooms", "Which room do you want to stay in?")
-            
-            if room.get(stayroom) == 'Open':
-                room[stayroom] = f'{name}'  
-                stayrooms.append(stayroom)  
-            else:
-                messagebox.showinfo("Error", f"Room {stayroom} is already taken. Please choose another.")
-                return
         
 
         days = simpledialog.askinteger("Stay", "How many days will you be staying for?")
@@ -231,17 +224,17 @@ def check_in():
         extra = simpledialog.askstring('Extras', 'Do you want pool or gym access?')
 
 
-        extra_cost = 0
+        
         if extra == 'pool':
             extra_cost = 30
         elif extra == 'gym':
             extra_cost = 30
-        elif extra == 'both' or extra == 'pool, gym' or extra == 'pool and gym':
+        elif extra == 'both' or 'pool, gym' or 'pool and gym' or 'gym, pool':
             extra_cost = 60
         elif extra == 'no':
             extra_cost = 0
 
-        # Calculate the cost based on the room rate and extras
+
         total_cost = 0
         for room_num in stayrooms:
             if room_num == 0:
@@ -267,52 +260,52 @@ def check_in():
             elif room_num == 10:
                 total_cost = 150 * days + extra_cost
         
-        # Show the total cost
+
         messagebox.showinfo("Cost", f"Your total cost is ${total_cost}")
         
-        # Ask for the payment amount
+
         cost = simpledialog.askinteger("Pay", f"Please Pay ${total_cost}")
         
         if cost == total_cost:
-            # Store guest info
+
             guest_info[name] = stayrooms
             messagebox.showinfo("Thank you", f"Have a nice day, {name}")
             messagebox.showinfo("Information", f"{name}, Rooms: {stayrooms}")
         else:
             simpledialog.askinteger("Error", "Please pay the right amount.")
-            messagebox.showinfo("Thank you", f"Have a nice day {name}")
+            messagebox.showinfo("bye", f"Have a nice day {name}")
             messagebox.showinfo("Information", f"{name}, Rooms: {stayrooms}")
         
-        # Show the updated room status
+
         messagebox.showinfo('Rooms', str(room))
 
 def check_out():
-    # Ask for the name of the guest
+
     nameroo = simpledialog.askstring("Name", "What is your name?")
     
-    # Check if the guest exists
+
     if nameroo not in guest_info:
         messagebox.showinfo("Error", "Hmmm im sorry I don't understand")
         return
 
-    # Get the rooms they stayed in
+
     stayrooms = guest_info[nameroo]
 
-    # Show the room details
+
     messagebox.showinfo("Information", f"{nameroo}, Rooms: {stayrooms}")
     
-    # Confirm check out
+
     messagebox.showinfo("Check out", "Successful check out!")
     messagebox.showinfo("Thank you", f"Thank you for staying at our hotel, have a nice day, {nameroo}!")
     
-    # Mark the rooms as 'Open' after check-out
+
     for room_num in stayrooms:
         room[room_num] = 'Open'
     
-    # Remove guest from guest info
+
     del guest_info[nameroo]
 
-# Main loop to let the user choose check-in or check-out
+
 for i in range(2):
     stuff = simpledialog.askstring("Want to do", 'Do you want to check out or check in?')
 
